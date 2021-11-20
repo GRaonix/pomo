@@ -29566,7 +29566,37 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"components/Button.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Button = function Button(_ref) {
+  var addClass = _ref.addClass,
+      name = _ref.name;
+
+  var hello = function hello() {
+    console.log("hello 123456");
+  };
+
+  return /*#__PURE__*/_react.default.createElement("button", {
+    onClick: hello(),
+    className: addClass
+  }, name);
+};
+
+var _default = Button;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -29645,6 +29675,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
+var _Button = _interopRequireDefault(require("./components/Button.jsx"));
+
 require("./style/style.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -29660,19 +29692,28 @@ var App = function App() {
     className: "pomodoro__main__timer"
   }, "Heure"), /*#__PURE__*/_react.default.createElement("div", {
     className: "pomodoro__main__buttons"
-  }, /*#__PURE__*/_react.default.createElement("button", {
-    className: "pomodoro__main__buttons__plus"
-  }, "+"), /*#__PURE__*/_react.default.createElement("button", {
-    className: "pomodoro__main__buttons__play"
-  }, "Play"), /*#__PURE__*/_react.default.createElement("button", {
-    className: "pomodoro__main__buttons__reset"
-  }, "Reset"), /*#__PURE__*/_react.default.createElement("button", {
-    className: "pomodoro__main__buttons__moins"
-  }, "-"))));
+  }, /*#__PURE__*/_react.default.createElement(_Button.default, {
+    addClass: "pomodoro__main__buttons__plus",
+    name: "plus"
+  }), /*#__PURE__*/_react.default.createElement(_Button.default, {
+    addClass: "pomodoro__main__buttons__pause",
+    name: "pause"
+  }), /*#__PURE__*/_react.default.createElement(_Button.default, {
+    addClass: "pomodoro__main__buttons__reset",
+    name: "reset"
+  }), /*#__PURE__*/_react.default.createElement(_Button.default, {
+    addClass: "pomodoro__main__buttons__minus",
+    name: "minus"
+  }))));
 };
+/*
+when plus is pressed => console.log(plus);
+
+*/
+
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.querySelector('#root'));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./style/style.scss":"style/style.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./components/Button.jsx":"components/Button.jsx","./style/style.scss":"style/style.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

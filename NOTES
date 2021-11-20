@@ -21,3 +21,15 @@ css :
     color : red;
     
 }
+-------------------------------------------
+const Button = ({addClass, name}) => {
+    return (
+        
+        <button className={addClass}>{name}</button>
+
+        -----------------------
+
+BEM NOTATION BLOCK ELEMENT MODIFIER
+Pour cibler avec SASS ? SCSS.
+__parent parentenfant paren....
+pas oublier les double __ ! (faire toute l'arbre de parentage)

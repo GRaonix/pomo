@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Button from './components/Button.jsx'
 import './style/style.scss'
 
 const App = () => {
@@ -9,10 +10,11 @@ const App = () => {
             <h1 className="pomodoro__heading">Hello Antoine !!!</h1>
             <main className="pomodoro__main"><p className="pomodoro__main__timer">Heure</p>
                 <div className="pomodoro__main__buttons">
-                    <button className="pomodoro__main__buttons__plus">+</button>
-                    <button className="pomodoro__main__buttons__play">Play</button>
-                    <button className="pomodoro__main__buttons__reset">Reset</button>
-                    <button className="pomodoro__main__buttons__moins">-</button>
+                    
+                    <Button addClass={"pomodoro__main__buttons__plus"} name={"plus"}/>
+                    <Button addClass={"pomodoro__main__buttons__pause"} name={"pause"}/>
+                    <Button addClass={"pomodoro__main__buttons__reset"} name={"reset"}/>
+                    <Button addClass={"pomodoro__main__buttons__minus"} name={"minus"}/>
                 </div>
             
             </main>
@@ -22,4 +24,8 @@ const App = () => {
     )
 }
 
+/*
+when plus is pressed => console.log(plus);
+
+*/
 ReactDOM.render(<App/>, document.querySelector('#root'))
