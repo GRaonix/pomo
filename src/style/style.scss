@@ -1,0 +1,22 @@
+@import "reset";
+.pomodoro {
+    color : blue;
+    margin: 0 auto;
+    width: 400px;
+    
+    &__main {
+        display: grid;
+        grid-template-columns:  5fr 1fr;
+        &__timer {
+            padding: 50px 80px;
+        }
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 50px;
+            margin: 0 auto;
+        }
+        border: 2px double black;    
+    }
+}

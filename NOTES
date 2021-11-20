@@ -1,0 +1,23 @@
+document.querySelector('XXX')
+
+pour les classes un point
+pour les html : rien du tout
+pour les id : #
+
+
+emmet snippets utiles : 
+div#nomdel'id
+=>
+<div id="root"></div>
+
+<link rel="stylesheet" href="styles.scss">
+
+when using Parcel disable "live sass compiler into vscode (extension)
+
+
+css : 
+
+#root { 
+    color : red;
+    
+}
